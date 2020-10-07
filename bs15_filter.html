@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device, initial-scale=1"/> 
+<link rel="stylesheet" href="bootstrap.css" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="bootstrap.js"></script>
+<script>
+	$(function(){
+		//검색어를 입력하면 호출하는 이벤트 // 검색기능
+		$("#searchWord").keyup(function(){
+			var word = $("#searchWord").val().toLowerCase();  //소문자로 바꾸려면 toLowerCase(), 대문자로 바꾸려면  toUpperCase()
+			//
+			$("#memList>tr").filter(function(){
+				var trTxt = $(this).text().toLowerCase();
+				//var idx = trTxt.indexOf(word); // trTxt.search(word); <문자열에서 특정문자의 위치를 찾아서 index를 구해준다. 없으면 -1뜸
+
+				var trTxt = $(this).text().toLowerCase().indexOf(word); //한줄로.. trTxt=-1,0,1,2,3,4....
+				
+				// true : 보임(유지), false : 안보임(변경) 
+				$(this).toggle(trTxt>-1);   //안에 이렇게 수식을 세우면 0이상일때 true고 -1이하면 false가 나온다.   //toggle = 보이면 숨기고 숨겨있으면 보이고
+				
+			});
+		});
+	});
+	
+	
+	
+</script>
+</head>
+<body>
+<div class="container">
+	<h1>Filter Test...</h1>
+	<input type="text" id="searchWord" placeholder="Search..." class="form-control"/>	
+	<hr/>
+	<table class="table">
+		<thead>
+		<tr>
+			<td>FirstName</td>
+			<td>LastName</td>
+			<td>Phone</td>
+			<td>Email</td>
+		</tr>
+		</thead>
+		<tbody id="memList">
+		<tr>
+			<td>mary</td>
+			<td>tiger</td>
+			<td>010-1111-1111</td>
+			<td>mary1234@naver.com</td>
+		</tr>
+		<tr>
+			<td>jone</td>
+			<td>model</td>
+			<td>010-2222-2222</td>
+			<td>jone114@naver.com</td>
+		</tr>
+		<tr>
+			<td>scott</td>
+			<td>hohn</td>
+			<td>010-3333-3333</td>
+			<td>scott4@naver.com</td>
+		</tr>
+		<tr>
+			<td>july</td>
+			<td>diamond</td>
+			<td>010-4444-4444</td>
+			<td>july124@naver.com</td>
+		</tr>
+		<tr>
+			<td>ford</td>
+			<td>grek</td>
+			<td>010-5555-5555</td>
+			<td>ford@naver.com</td>
+		</tr>
+		<tr>
+			<td>sweg</td>
+			<td>wang</td>
+			<td>010-6666-6666</td>
+			<td>awdt4@naver.com</td>
+		</tr>
+		<tr>
+			<td>jane</td>
+			<td>mori</td>
+			<td>010-7777-7777</td>
+			<td>mfsd@naver.com</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

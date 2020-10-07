@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device, initial-scale=1"/> 
+<link rel="stylesheet" href="bootstrap.css" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+	<h1>Collapse</h1>
+	<!--
+		 버튼을 클릭하면 이미지가 접혔다 펼쳐지는 기능
+		.collapse : 접혔다, 펼쳐지는 기능이 있고 처음에 접힌 상태임.
+		.show : 처음 실행시 보임.
+		
+		data-target="#id"    ->    클릭시 보여지거나 숨겨질 대상
+	
+	 -->
+	<button class="btn btn-info" data-target="#view1" data-toggle="collapse">클릭하세요</button><br/>
+	<div id="view1" class="collapse show"><!-- show를 쓰면 첫화면에 보인다. 안쓰면 안보임 -->
+		<img src="../img/32.jpg"/>
+	</div>
+	
+	<hr/>
+	<button class="btn btn-secondary" data-target="#view2" data-toggle="collapse">문장을 보여줌</button><br/>
+	<div id="view2" class="collapse show">
+	올해 하반기 유튜브 시장에서는 군대 관련 콘텐트가 최고의 히트 상품이다. 웹 예능 ‘가짜 사나이’는 조회 수가 1000만에 달할 정도다. 군대 콘텐트의 이같은 인기를 틈타 국방부도 자체 콘텐트를 올렸지만 흥행은커녕 논란만 일으키며 비난을 사고 있다.
+	</div>
+	
+	<hr/>
+	<h1>Accordion예</h1>
+	<div id="accordion">
+		<div class="card">
+			<div class="card-header" data-target="#acco1" data-toggle="collapse" data-parent="#accordion">아코디언 적용예1</div>
+			<div class="collapse" id="acco1">
+				국방부도 최근 군대 콘텐트 인기를 노리고 자체 제작한 영상을 유튜브에 올렸다. 하지만 군대 콘텐트의 인기 물결에 합류하기는 커녕 오히려 네티즌의 비난 속에 논란을 낳고 있다. 국방부는 지난 1일 '72주년 국군의 날 특집'이라며 72분짜리 동영상을 올렸다. 육군 훈련소의 기상나팔이나 행군 때 나는 군화 소리 같은 ASMR(청각이나 시각적 자극에 쾌감을 느끼는 경험) 동영상이다. 국방부는 “72분의 그리운 소리, 육군 훈련소 ASMR! 제식훈련, 야간 행군으로 이어지는 소리를 들으며 그때를 회상해보자”고 광고했다.
+				하지만 곧장 남초(男超) 성향의 온라인 커뮤니티에서부터 반박이 제기됐다. “북한군도 제대로 못 잡는 주제에 잘도 군대 가고 싶겠다” “원해서 가는 군대가 아닌데 그리울 리 있겠느냐”는 등의 댓글이 달렸다. 일부 예비역과 입대 대상자 중심으로 군에 대한 반감이 쏟아져 나온 것이다. 한 네티즌은 “새벽 근무하고 와서 오전 6시에 기상나팔 소리 들으면 심장 두근거리고 스트레스받았었다. 이건 ASMR이 아니라 PTSD(외상 후 스트레스 장애)라고 해야 맞다”고 주장하기도 했다. ‘가짜 사나이’를 언급하면서 “‘가짜 사나이’ 떡살(‘급상승’을 뜻하는 은어)에 올려 타려다 실패”라는 댓글도 있다. 한편에선 “군대 기상나팔 소리를 알람으로 사용하기도 한다” “그 시절을 추억으로 볼 수 있다”는 반응이 나오기도 했다.
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" data-target="#acco2" data-toggle="collapse" data-parent="#accordion">테스트2</div>
+			<div class="collapse" id="acco2">마트에서 하루 10박스씩 팔리는 과자.'
+				위와 같은 별칭으로 최근 각종 소셜네트워크서비스(SNS)상에서 화제가 되고 있는 과자가 있다. 오리온이 지난달 출시한 '꼬북칩 초코츄러스맛'이다. 과자 구입·시식 후기가 인터넷에 봇물을 이룰 정도로 소비자들 사이에서 '핫 아이템'으로 떠올랐다. 출시한 지 겨우 한 달인데 벌써 10억원어치가 팔려나가 업계에선 한동안 히트 상품이 뜸했던 제과 시장에 '제2의 허니버터칩 열풍'을 일으키는 것 아니냐는 기대 어린 관측도 솔솔 나온다.
+				꼬북칩 초코츄러스맛은 오리온이 내놓은 꼬북칩 시리즈 세 번째로, 기존 '콘스프맛'과 '달콩 인절미맛'에 이어 지난달 선보인 새로운 맛이다. 네 겹의 칩을 겹쳐 아삭아삭 씹는 맛을 살린 꼬북칩의 특징을 그대로 이어받아 겹겹이 진한 초콜릿을 발랐다. 여기에 추로스에 주로 사용되는 슈거토핑을 뿌려 달콤함을 극대화했다.</div>
+		</div>
+		<div class="card">
+			<div class="card-header" data-target="#acco3" data-toggle="collapse" data-parent="#accordion">테스트3</div>
+			<div class="collapse" id="acco3">화제가 되기 시작한 것은 '맛있다'는 후기가 SNS를 통해 퍼지면서부터다. 네이버 블로그는 물론 트위터나 인스타그램 등 각종 SNS에서는 "꼬북칩 초코츄러스맛을 알게 된 게 후회스럽다. 살이 쪄버렸다" "존맛탱이다. 내가 먹어서 씨를 말려버리겠다" "먹다 보면 한 봉지가 순삭이다" "오리온에서 맛잘알 직원이 만들었다더니 이건 진짜다" "미친 거 아닌가. 천상의 맛이다" 등등 과자 맛을 칭찬하는 글들이 줄을 잇고 있다. 특히 칼로리가 한 봉지(160g)에 883㎉에 달할 정도로 높은데도 불구하고 손이 가는 걸 멈출 수 없을 정도로 중독성이 강해 '마약 과자'라는 평이 많다.
+				입소문이 퍼지면서 "도대체 어떤 맛이기에 그러느냐"며 네티즌들 사이에서 궁금증이 커지기 시작했고, 꼬북칩 초코츄러스맛을 찾아 나서는 소비자들도 늘었다.</div>
+		</div>
+	
+	</div>
+</div>
+</body>
+</html>
